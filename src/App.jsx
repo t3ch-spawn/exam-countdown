@@ -9,7 +9,12 @@ import { useRef } from "react";
 import Bubbles from "./Bubbles";
 
 function App() {
-  const [timeLeft, setTimeLeft] = useState({
+  const [timeLeftHours, setTimeLeftHours] = useState({
+    seconds: "",
+    minutes: "",
+    hours: "",
+  });
+  const [timeLeftDays, setTimeLeftDays] = useState({
     seconds: "",
     minutes: "",
     hours: "",
@@ -114,7 +119,7 @@ function App() {
     const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    setTimeLeft({
+    setTimeLeftDays({
       days: days,
       seconds: seconds,
       minutes: minutes,
@@ -135,7 +140,7 @@ function App() {
     const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
     const hours = Math.floor(timeDifference / (1000 * 60 * 60));
 
-    setTimeLeft({
+    setTimeLeftHours({
       seconds: seconds,
       minutes: minutes,
       hours: hours,
@@ -247,14 +252,14 @@ function App() {
             {format === "hours" ? (
               <>
                 {" "}
-                {timeLeft.hours}hrs : {timeLeft.minutes}mins :{" "}
-                {timeLeft.seconds}s
+                {timeLeftHours.hours}hrs : {timeLeftHours.minutes}mins :{" "}
+                {timeLeftHours.seconds}s
               </>
             ) : (
               <>
                 {" "}
-                {timeLeft.days}days : {timeLeft.hours}hrs : {timeLeft.minutes}
-                mins : {timeLeft.seconds}s
+                {timeLeftDays.days}days : {timeLeftDays.hours}hrs : {timeLeftDays.minutes}
+                mins : {timeLeftDays.seconds}s
               </>
             )}
           </p>
