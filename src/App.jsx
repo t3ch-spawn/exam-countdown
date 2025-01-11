@@ -22,8 +22,8 @@ function App() {
 
   useGSAP(() => {
     if (randomBant === "") {
-      setRandomBant(Math.round(Math.random() * (bants.length - 1)));
-      setRandomMotivation(Math.round(Math.random() * (motivations.length - 1)));
+      setRandomBant(Math.floor(Math.random() * (bants.length - 1) + 0.7));
+      setRandomMotivation(Math.floor(Math.random() * (motivations.length - 1) + 0.7));
     }
 
     if (randomBant !== "") {
