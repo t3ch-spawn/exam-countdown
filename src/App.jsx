@@ -39,7 +39,6 @@ function App() {
           y: 100,
           stagger: 0.05,
           ease: "back.out",
-          
         })
         .from(
           ".logo",
@@ -120,9 +119,10 @@ function App() {
   }
   const targetDate = "2025-01-27T00:00:00";
   useEffect(() => {
-    setTimeout(() => {
+    setInterval(() => {
       getTimeRemaining(targetDate);
     }, 1000);
+    () => {}, 1000;
   }, []);
 
   return (
@@ -159,9 +159,13 @@ function App() {
         </p>
       </div>
 
-
       {/* Credits */}
-      <a href="https://x.com/t3ch_spawn" className="text-[18px] underline font-ibm fixed bottom-[20px] left-[50%] translate-x-[-50%]">t3chspawn</a>
+      <a
+        href="https://x.com/t3ch_spawn"
+        className="text-[18px] underline font-ibm fixed bottom-[20px] left-[50%] translate-x-[-50%]"
+      >
+        t3chspawn
+      </a>
     </main>
   );
 }
