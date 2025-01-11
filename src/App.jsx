@@ -126,7 +126,7 @@ function App() {
   }, []);
 
   return (
-    <main className="font-happy bg-[#F2F2F2] min-h-[100vh] overflow-hidden flex flex-col items-center justify-center text-black font-medium">
+    <main className="font-happy bg-[#E9E3C4] min-h-[100vh] overflow-hidden flex flex-col items-center justify-center text-black font-medium">
       {/* Loader */}
       <div className="bg-[#0F0F0F] h-[100vh] w-[100vw] flex flex-col justify-center items-center text-white loader-container fixed overflow-hidden z-[200] text-center">
         {/* Container for logo and text */}
