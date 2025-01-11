@@ -34,17 +34,18 @@ function App() {
       const width = greeting.getBoundingClientRect().width;
       console.log(width);
       gsap
-        .timeline({ delay: 0.7 })
+        .timeline({ delay: 1 })
         .from(greeting.querySelectorAll(".char"), {
           y: 100,
-          stagger: 0.04,
+          stagger: 0.05,
           ease: "back.out",
+          
         })
         .from(
           ".logo",
           {
             x: `-${greeting.offsetWidth + 40}px`,
-            duration: 1.5,
+            duration: 1.8,
             rotate: -720,
             ease: "power2.out",
             opacity: 0,
@@ -157,6 +158,10 @@ function App() {
           {motivations[randomMotivation]}
         </p>
       </div>
+
+
+      {/* Credits */}
+      <a href="https://x.com/t3ch_spawn" className="text-[18px] underline font-ibm fixed bottom-[20px] left-[50%] translate-x-[-50%]">t3chspawn</a>
     </main>
   );
 }
