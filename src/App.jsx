@@ -22,8 +22,8 @@ function App() {
 
   useGSAP(() => {
     if (randomBant === "") {
-      setRandomBant(Math.floor(Math.random() * (bants.length - 1)));
-      setRandomMotivation(Math.floor(Math.random() * (motivations.length - 1)));
+      setRandomBant(Math.round(Math.random() * (bants.length - 1)));
+      setRandomMotivation(Math.round(Math.random() * (motivations.length - 1)));
     }
 
     if (randomBant !== "") {
@@ -76,11 +76,11 @@ function App() {
 
   const bants = [
     "Ma sere",
-    "Dey play dey go",
+    "Olodo adugbo",
     "Keep fooling",
     "No wise up",
     "Keep sleeping",
-    "Olodo adugbo",
+    "Dey play dey go",
   ];
 
   const motivations = [
