@@ -130,7 +130,7 @@ function App() {
       {/* Loader */}
       <div className="bg-[#0F0F0F] h-[100vh] w-[100vw] flex flex-col justify-center items-center text-white loader-container fixed overflow-hidden z-[200] text-center">
         {/* Container for logo and text */}
-        <div className="loader-content h-full w-full flex flex-col justify-center items-center text-[45px] -600:text-[28px]">
+        <div className="loader-content h-full w-full flex flex-col justify-center items-center text-[45px] -600:text-[24px]">
           <div className="split flex gap-[16px] -600:gap-[0px] justify-center items-center  ">
             <p ref={greetingContRef} className="font-write greeting">
               Dearest Gentle Techite
@@ -148,13 +148,13 @@ function App() {
 
       {/*Container for Countdown  */}
       <div className="flex flex-col justify-center items-center gap-[10vw] -600:gap-[100px] font-medium text-center ">
-        <h1 className="text-[45px] -600:text-[28px] flex flex-wrap justify-center items-end leading-[100%] gap-[20px]">
+        <h1 className="text-[45px] -600:text-[24px] flex flex-wrap justify-center items-end leading-[100%] gap-[20px]">
           <p>Your Exam starts in</p> <Bubbles className="mb-[5px]" />
         </h1>
         <p className="font-ibm text-[45px] -600:text-[28px]">
           {timeLeft.hours}hrs : {timeLeft.minutes}mins : {timeLeft.seconds}s
         </p>
-        <p className="text-[36px] -600:text-[28px]">
+        <p className="text-[36px] -600:text-[24px]">
           {motivations[randomMotivation]}
         </p>
       </div>
