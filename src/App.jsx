@@ -131,7 +131,7 @@ function App() {
       <div className="bg-[#0F0F0F] h-[100vh] w-[100vw] flex flex-col justify-center items-center text-white loader-container fixed overflow-hidden z-[200] text-center">
         {/* Container for logo and text */}
         <div className="loader-content h-full w-full flex flex-col justify-center items-center text-[45px] -600:text-[24px]">
-          <div className="split flex gap-[16px] -600:gap-[0px] justify-center items-center  ">
+          <div className="split flex gap-[16px] -600:gap-[5px] justify-center items-center  ">
             <p ref={greetingContRef} className="font-write greeting">
               Dearest Gentle Techite
             </p>
