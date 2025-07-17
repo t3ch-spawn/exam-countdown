@@ -7,6 +7,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import Bubbles from "./Bubbles";
+import WorkSurveyVisualizations from "./adolescent-work-visualizations";
+import CopingStrategiesVisualizations from "./coping-strategies-visualization";
+import Home from "./Home";
 
 function App() {
   const [timeLeftHours, setTimeLeftHours] = useState({
@@ -24,13 +27,15 @@ function App() {
 
   const [randomBant, setRandomBant] = useState("");
   const [randomMotivation, setRandomMotivation] = useState("");
-
+  
   const greetingContRef = useRef(null);
 
   useGSAP(() => {
     if (randomBant === "") {
       setRandomBant(Math.floor(Math.random() * (bants.length - 1) + 0.7));
-      setRandomMotivation(Math.floor(Math.random() * (motivations.length - 1) + 0.7));
+      setRandomMotivation(
+        Math.floor(Math.random() * (motivations.length - 1) + 0.7)
+      );
     }
 
     if (randomBant !== "") {
@@ -177,6 +182,8 @@ function App() {
 
   return (
     <main className="font-happy bg-[#E9E3C4] min-h-[100vh] overflow-hidden flex flex-col items-center justify-center text-black font-medium">
+    <>
+      {" "}
       {/* Loader */}
       <div className="bg-[#0F0F0F] h-[100vh] w-[100vw] flex flex-col justify-center items-center text-white loader-container fixed overflow-hidden z-[200] text-center">
         {/* Container for logo and text */}
@@ -195,7 +202,6 @@ function App() {
           <p className="mt-[70px]  split bant">{bants[randomBant]} 😂🫵🏾</p>
         </div>
       </div>
-
       {/*Container for Countdown  */}
       <div className="flex flex-col justify-center items-center gap-[10vw] -600:gap-[100px] font-medium text-center ">
         <h1 className="text-[45px] -600:text-[24px] flex flex-wrap justify-center items-end leading-[100%] gap-[20px]">
@@ -258,7 +264,8 @@ function App() {
             ) : (
               <>
                 {" "}
-                {timeLeftDays.days}days : {timeLeftDays.hours}hrs : {timeLeftDays.minutes}
+                {timeLeftDays.days}days : {timeLeftDays.hours}hrs :{" "}
+                {timeLeftDays.minutes}
                 mins : {timeLeftDays.seconds}s
               </>
             )}
@@ -268,7 +275,6 @@ function App() {
           {motivations[randomMotivation]}
         </p>
       </div>
-
       {/* Credits */}
       <a
         href="https://x.com/t3ch_spawn"
@@ -276,6 +282,9 @@ function App() {
       >
         t3chspawn
       </a>
+    </>
+      {/* <WorkSurveyVisualizations />
+      <CopingStrategiesVisualizations /> */}
     </main>
   );
 }
